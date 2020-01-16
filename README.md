@@ -1,37 +1,21 @@
-# wechatDemo
+# wechat-demo
 
 #### 介绍
-对接微信公众号相关功能示例
+学习对接微信公众号相关功能
 
-#### 软件架构
-软件架构说明
+#### 使用技术说明
+Java+gradle+springboot
 
-
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 参与贡献
-
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
-
-
-#### 码云特技
-
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
-5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+#### 功能列表
+    1、公众号获取用户微信公开信息
+    2、前端JS调取微信扫一扫功能
+    3、公众号创建带事件的二维码
+    4、接收微信推送消息通知并响应
+#### 使用方法（微信公众号测试账号）
+    1、注册微信公众号测试账号https://mp.weixin.qq.com/debug/cgi-bin/sandboxinfo?action=showinfo&t=sandbox/index
+    2、注册完成后获取appID和appsecret
+    3、拉取代码并完善application.yml里面的appID和appsecret以及domain(微信能回调的地址，即公网能访问的地址)和webUrl(无前端页面可不填，但是注意修改涉及到的相关代码)
+    4、微信公众号测试账号配置开发者，接口配置信息-->修改--->URL(controller里面的interfaceConfig(get)请求地址)--->token(与application.yml里面的wechat.config.token一致)
+    5、修改JS安全域名即调用微信js的服务器的地址(不需要能回调，即非公网地址也行)
+    6、修改网页授权获取用户基本信息--->只需要域名 不要带http和端口 参考（www.gitee.com）
+    7、配置完成，即可体验功能列表相关功能
